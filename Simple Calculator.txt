@@ -1,22 +1,22 @@
 #include <stdio.h>
 int main(){
-   char Operator;
-   float num1, num2, result = 0;
-   printf("\n Enter any one operator like +, -, *, / : ");
-   scanf("%c", &Operator);
-   printf("Enter the values of Operands num1 and num2 \n : ");
-   scanf("%f%f", &num1, &num2);
-   switch(Operator){
-      case '+': result = num1 + num2;
+   char op;
+   float a,b,r= 0;
+   printf("\n Enter any one operator that you would like to perform calculation with +, -, *, / : ");
+   scanf("%c",&op);
+   printf("Enter two numbers: \n : ");
+   scanf("%f%f",&a,&b);
+   switch(op){
+      case '+':r=a+b;
          break;
-      case '-': result = num1 - num2;
+      case '-':r=a-b;
          break;
-      case '*': result = num1 * num2;
+      case '*':r=a*b;
          break;
-      case '/': result = num1 / num2;
+      case '/':r=a/b;
          break;
-      default: printf("\n Invalid Operator ");
+      default: printf("\n\tInvalid");
    }
-   printf("The value = %f", result);
+   printf("The value = %f", r);
    return 0;
 }
